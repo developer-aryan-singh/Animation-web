@@ -126,23 +126,7 @@ ScrollTrigger.create({
         document.querySelector(".box6").classList.remove("solutions-client_visibleTransition__O1i3U");
     },
 })
-// ScrollTrigger.create({
-//     trigger: '.li3',
-//     animation: gsap.fromTo(".box3", 2, {
-//         opacity: 1,
-//         delay: 2
-//     }, {
-//         opacity: 0,
-//         delay: 2
-//     }),
-//     pin: true,
-//     start: 'top center',
-//     end: 'bottom 50%',
-//     scrub: 1,
-//     markers: false,
-// })
-
-/* ===============counter=================== */
+ 
  
  
 
@@ -168,13 +152,13 @@ gsap.to(counterObj, {
 /* =====================marquee animation================= */
 function createMarqueeAnimation(selector, direction) {
     let marquee = document.querySelector(selector);
-    let clone = marquee.innerHTML + marquee.innerHTML; // Infinite loop effect
-    marquee.innerHTML = clone; // Duplicate content for smooth looping
+    let clone = marquee.innerHTML + marquee.innerHTML; 
+    marquee.innerHTML = clone; 
 
-    let distance = marquee.scrollWidth / 2; // Half width for seamless loop
+    let distance = marquee.scrollWidth / 2; 
 
     let tl = gsap.timeline({
-        repeat: -1, // Infinite loop
+        repeat: -1, 
         defaults: { ease: "none", duration: 10 } // Smooth speed
     });
 
@@ -191,18 +175,14 @@ function createMarqueeAnimation(selector, direction) {
         }
     });
 }
-
-// First Marquee (Scroll Down → Right, Scroll Up → Left)
 createMarqueeAnimation("#marquee1", "right");
-
-// Second Marquee (Scroll Down → Left, Scroll Up → Right)
 createMarqueeAnimation("#marquee2", "left");
  
 
 
 /* ======================animate services================= */
 document.addEventListener("DOMContentLoaded", () => {
-    // Initialize GSAP animation for sections
+   
     gsap.registerPlugin(ScrollTrigger)
 
     gsap.utils.toArray(".top_left_translate").forEach((section) => {
@@ -304,8 +284,7 @@ let totalWidth = contents.scrollWidth;
 let containerWidth = document.querySelector(".container-slider").offsetWidth;
 let maxScroll = totalWidth - containerWidth;
 let currentScroll = 0;
-
-// Scroll-based GSAP animation
+    
 let scrollAnimation = gsap.to(contents, {
     x: -maxScroll,
     ease: "none",
@@ -317,17 +296,16 @@ let scrollAnimation = gsap.to(contents, {
     }
 });
 
-// Button controls for manual scrolling
 document.getElementById("nextBtn").addEventListener("click", () => {
     if (currentScroll > -maxScroll) {
-        currentScroll -= 220; // Each item width + gap
+        currentScroll -= 220; 
         gsap.to(contents, { x: currentScroll, duration: 0.5 });
     }
 });
 
 document.getElementById("prevBtn").addEventListener("click", () => {
     if (currentScroll < 0) {
-        currentScroll += 220; // Each item width + gap
+        currentScroll += 220; 
         gsap.to(contents, { x: currentScroll, duration: 0.5 });
     }
 });
