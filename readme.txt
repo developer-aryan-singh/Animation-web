@@ -9,7 +9,7 @@ This project demonstrates animations using GSAP (GreenSock Animation Platform) a
 - **Bootstrap 5.3.3** - Responsive design framework
 - **GSAP 3.3.2** - JavaScript animation library
 - **ScrollTrigger** - GSAP plugin for scroll-based animations
-- **jQuery 3.7.1** - Simplified DOM manipulation and AJAX
+ 
 
 ## Installation
 1. Clone the repository:
@@ -30,6 +30,8 @@ project-folder/
 │   │   ├── style.css
 │   │-- js/
 │   │   ├── main.js
+|   │-- font/
+│   │   ├── Agrandir\ Regular\ 400.otf
 │-- index.html
 ```
 
@@ -42,7 +44,7 @@ project-folder/
 The following external libraries are used in this project:
 - [Bootstrap 5.3.3](https://getbootstrap.com/)
 - [GSAP 3.3.2](https://greensock.com/gsap/)
-- [jQuery 3.7.1](https://jquery.com/)
+ 
 
 ## License
 This project is licensed under the MIT License.
