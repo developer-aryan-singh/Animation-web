@@ -4,6 +4,11 @@
     --black-color: #000000;
 }
 
+@font-face {
+    font-family:"Agrandir";
+    src: url(../font/Agrandir\ Regular\ 400.otf);
+}
+
 * {
     font-family: "Agrandir";
 }
